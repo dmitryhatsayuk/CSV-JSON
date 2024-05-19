@@ -32,7 +32,6 @@ public class Main {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document doc = builder.parse(new File(s));
-        Node root = doc.getDocumentElement();
         NodeList staff = doc.getElementsByTagName("employee");
         for (int i = 0; i < staff.getLength(); i++) {
             Node node = staff.item(i);
